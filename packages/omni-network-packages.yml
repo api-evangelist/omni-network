@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.omni.network/sdk/getting-started
+description: >-
+  First-party Omni SDK client libraries for integrating SolverNet cross-chain
+  intents. Confirmed via the npm registry (https://registry.npmjs.org) and the
+  Omni developer docs. Both packages are published from the official
+  github.com/omni-network/omni monorepo (sdk/packages/*) under the MIT license.
+  The npmjs.com front-end returns 403 to automated clients, so versions were read
+  from the registry JSON.
+packages:
+  - language: typescript
+    registry: npm
+    name: "@omni-network/core"
+    url: https://www.npmjs.com/package/@omni-network/core
+    source: https://github.com/omni-network/omni
+    install: npm install @omni-network/core
+    version: 0.3.2
+    license: MIT
+    description: Core logic for interacting with Omni SolverNet from any JavaScript runtime.
+    official: true
+  - language: typescript
+    registry: npm
+    name: "@omni-network/react"
+    url: https://www.npmjs.com/package/@omni-network/react
+    source: https://github.com/omni-network/omni
+    install: npm install @omni-network/react
+    version: 0.3.3
+    license: MIT
+    description: React hooks (useQuote, useOrder, ...) for interfacing with Omni SolverNet from an application frontend.
+    official: true

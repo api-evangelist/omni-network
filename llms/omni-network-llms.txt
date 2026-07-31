@@ -1,0 +1,29 @@
+# Omni Devs | Docs
+
+> Documentation for the Omni SDK, SolverNet, and related concepts.
+
+## Docs
+
+- [Resources](/resources): Need assistance with integrating the Omni SDK or have questions about Omni Network?
+- [The Intent Fulfillment Mechanism](/concepts/intent-mechanism): SolverNet processes cross-chain intents through a mechanism designed for security and low latency:
+- [Single-Chain Deployments](/concepts/single-chain-deployment): SolverNet, powered by [intents](/concepts/the-solution.md), enables a new, simplified paradigm for decentralized application development: **deploy on a single chain, make it accessible from anywhere.**
+- [The Problem](/concepts/the-problem): Interacting with applications on different blockchains (Ethereum L1, L2s - like Base, Arbitrum, Optimism etc.) is terrible UX:
+- [User-Centric Actions via Intents](/concepts/the-solution): Intents shift the focus from: *moving assets between chains*, to: *achieving user goals across chains*.
+- [Omni Overview](/introduction/omni-overview): The most glaring side effect of the multi-chain world is the fragmentation of users and capital across the crypto ecosystem. This has degraded both the developer and user experiences.
+- [OMNI Token](/introduction/omni-token): OMNI is an ERC-20 token launched on Ethereum L1 (deployed to [`0x36e66fbbce51e4cd5bd3c62b637eb411b18949d4`](https://etherscan.io/token/0x36e66fbbce51e4cd5bd3c62b637eb411b18949d4)) with a maximum supply of 100,000,000.
+- [Welcome](/introduction/welcome): Welcome to the Omni documentation! Omni is a technology designed to make the **entire crypto ecosystem** feel like a single chain for users and developers.
+- [What is SolverNet?](/introduction/what-is-solvernet): SolverNet is a network of solvers that execute intent-based actions on behalf of users. Its primary interface for developers is the Omni SDK, which allows devs to integrate SolverNet functionality into their frontend. An application may be deployed on one chain, but users can still use the app even if their funds are held on a different chain.
+- [Whitepaper](/introduction/whitepaper): The following whitepaper is the culmination of years of research and development and formed the foundation of the Omni Protocol. Hope you enjoy reading it!
+- [Contracts without "onBehalfOf"](/guides/contracts-without-onbehalfof): This guide demonstrates how to handle contracts that do not support the `onBehalfOf` pattern. And instead, credit positions directly to `msg.sender`.
+- [Debugging destination calls](/guides/debugging-destination-calls): When validating orders using the Omni SDK, the SolverNet API may reject orders by returning a `DestCallReverts` rejection reason, indicating a call fails to execute on the destination chain.
+- [Multi-Step Deposits](/guides/multistep-deposit): The Omni SDK allows you to compose multiple contract interactions on the destination chain within a single cross-chain order. This powerful feature enables complex workflows, such as depositing funds into one protocol and then staking the resulting token in another, all atomically from the user's perspective.
+- [Cross Chain Transfers](/guides/transfers): This guide demonstrates how to open orders for ERC20 and native token transfers. Both can be paid for with any supported token on the source chain.
+- [Frequently Asked Questions](/sdk/faq): Nothing! Omni is live on mainnet, permissionless, and allows arbitrary contract calls. If your protocol is live on mainnet and permissionless, you can integrate it into your dApp using the Omni SDK without the Omni team needing to do anything. Solvers will be able to interact with your contracts on the destination chain to fulfill user intents submitted via the SDK.
+- [Getting Started](/sdk/getting-started): The Omni SDK contains two main TypeScript packages available on the [npm registry](https://www.npmjs.com/):
+- [Supported Assets](/sdk/supported-assets): SolverNet supports both **like-asset** operations (depositing an asset on the source chain and receiving the same asset type on the destination chain) and **swaps** between different supported assets. They are treated the same way - just input different token addresses. For details on executing swaps, see the [Swaps page](/sdk/swaps.mdx).
+- [Executing Swaps](/sdk/swaps): Cross-chain swaps with the Omni SDK build directly on the like-asset transfer flow.
+- [Rocket Pool rETH Deposit](/guides/examples/rocketpool): This example uses a simplified hook structure (`useL2Deposit`) for demonstration and specific testnet addresses. The core logic involves `useQuote` and `useOrder`. Adapt addresses and chain IDs as needed.
+- [Symbiotic wstETH Deposit](/guides/examples/symbiotic): **Holesky Vault:** [app.holesky.symbiotic.fi](https://app.holesky.symbiotic.fi/vault/0xd88dDf98fE4d161a66FB836bee4Ca469eb0E4a75)
+- [Cross-Chain Deposit](/sdk/getting-started/basic-deposit): This guide walks through the standard process of enabling a user to deposit assets from one chain into a contract on another chain using our react hooks (`@omni-network/react`), assuming the target contract supports depositing on behalf of a user (e.g., via an `onBehalfOf` parameter).
+- [Getting Started using the core package](/sdk/getting-started/core): The Omni SDK contains APIs for interfacing with Omni SolverNet, your gateway to enabling any transaction, on any chain, from any supported JavaScript runtime.
+- [Getting Started using the React package](/sdk/getting-started/react): The Omni SDK contains React hooks for interfacing with Omni SolverNet, your gateway to enabling any transaction, on any chain, directly from your application frontend.
